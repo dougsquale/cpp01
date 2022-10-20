@@ -6,7 +6,7 @@
 /*   By: dbelpaum <dbelpaum@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 17:14:49 by dbelpaum          #+#    #+#             */
-/*   Updated: 2022/10/20 17:50:35 by dbelpaum         ###   ########.fr       */
+/*   Updated: 2022/10/20 18:08:29 by dbelpaum         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ Harl::~Harl(void)
 void Harl::complain(std::string level) const
 {
 	void (Harl::*arr[])(void) const = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
-	std::string levels[4] = {"debug", "info", "warning", "error"};
+	std::string levels[4] = {"DEBUG", "INFO", "WARNING", "ERROR"};
 	for (int i = 0; i < 4; i++)
 	{
 		if (level == levels[i])
