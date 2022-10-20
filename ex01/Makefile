@@ -8,7 +8,7 @@ FLAGS			= -Wall -Wextra -Werror -std=c++98
 
 RM				= rm -f
 
-NAME			= Zombies
+NAME			= run
 
 
 all:			$(NAME)
