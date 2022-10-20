@@ -6,7 +6,7 @@
 /*   By: dbelpaum <dbelpaum@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 13:55:45 by dbelpaum          #+#    #+#             */
-/*   Updated: 2022/10/20 15:28:25 by dbelpaum         ###   ########.fr       */
+/*   Updated: 2022/10/20 15:50:51 by dbelpaum         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,10 +57,10 @@ int	main(int ac, char **av)
 			findpos = line.find(s1, offset);
 			line.erase(findpos, s1.length());
 			line.insert(findpos, s2);
-			offset += s2.length() + 1;
-			std::cout << line << std::endl;
-			std::cout << offset << std::endl;
+			offset = findpos + s2.length();
 		}
 		outputFile << line;
 	}
+	inputFile.close();
+	outputFile.close();
 }
