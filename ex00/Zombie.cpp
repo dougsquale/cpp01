@@ -6,7 +6,7 @@
 /*   By: dbelpaum <dbelpaum@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 11:19:48 by dbelpaum          #+#    #+#             */
-/*   Updated: 2022/10/20 11:26:04 by dbelpaum         ###   ########.fr       */
+/*   Updated: 2022/10/20 12:13:23 by dbelpaum         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ Zombie::Zombie(std::string name)
 
 Zombie::~Zombie(void)
 {
+	std::cout << "<" << this->_name << " has been destroyed>" << std::endl;
 	return ;	
 }
 
