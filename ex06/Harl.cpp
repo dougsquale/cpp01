@@ -6,7 +6,7 @@
 /*   By: dbelpaum <dbelpaum@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 17:14:49 by dbelpaum          #+#    #+#             */
-/*   Updated: 2022/10/20 18:06:43 by dbelpaum         ###   ########.fr       */
+/*   Updated: 2022/10/24 11:51:49 by dbelpaum         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,12 +36,15 @@ void Harl::complain(std::string level) const
 		case 0:
 			std::cout << "[DEBUG]" << std::endl;
 			(this->*arr[0])();
+			__attribute__ ((fallthrough));
 		case 1:
 			std::cout << "[INFO]" << std::endl;
 			(this->*arr[1])();
+			__attribute__ ((fallthrough));
 		case 2:
 			std::cout << "[WARNING]" << std::endl;
 			(this->*arr[2])();
+			__attribute__ ((fallthrough));
 		case 3:
 			std::cout << "[ERROR]" << std::endl;
 			(this->*arr[3])();
