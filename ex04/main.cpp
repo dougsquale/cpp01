@@ -6,7 +6,7 @@
 /*   By: dbelpaum <dbelpaum@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 13:55:45 by dbelpaum          #+#    #+#             */
-/*   Updated: 2022/10/24 11:33:57 by dbelpaum         ###   ########.fr       */
+/*   Updated: 2022/10/25 12:26:27 by dbelpaum         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,9 @@ int	main(int ac, char **av)
 	size_t			findpos;
 	size_t			offset;
 	
+
+	if (s1.empty())
+		return (std::cout << "Error : s1 is empty" << std::endl, 1);
 
 	if (!inputFile)
 		return (std::cout << "Error : cannot open file" << std::endl, 1);
